@@ -12,18 +12,76 @@
       href="./images/favicon-32x32.png"
     />
 
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
     <title>Frontend Mentor | QR code component</title>
 
     <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
     <style>
-      .attribution {
-        font-size: 11px;
+      body {
+        background-color: #d5e1ef;
+        margin: 0;
+        display: flex; /* Используем Flexbox для центрирования всего содержимого */
+        justify-content: center; /* Центрируем по горизонтали */
+        align-items: center; /* Центрируем по вертикали */
+        height: 100vh; /* Устанавливаем высоту на всю высоту экрана */
+      }
+
+      .container {
+        width: 320px;
+        height: 499px;
+        background-color: #ffffff;
+        border-radius: 20px;
+        padding: 16px 16px 40px 16px;
+        box-sizing: border-box;
+      }
+
+      .qr-image {
+        background-image: url("images/image-qr-code.png");
+        height: 288px;
+        width: 288px;
+        background-size: cover;
+        border-radius: 10px;
+      }
+
+      .text-bold {
+        color: #1f314f;
+        font-family: "Outfit", sans-serif; /* Шрифт Outfit */
+        font-weight: bold; /* Жирное начертание */
+        font-size: 22px; /* Размер шрифта 22px */
+        line-height: 120%; /* Межстрочный интервал 120% */
+        letter-spacing: 0px; /* Расстояние между буквами 0px */
+        margin-top: 24px;
+        margin-bottom: 20px;
         text-align: center;
       }
-      .attribution a {
-        color: hsl(228, 45%, 44%);
+
+      .text {
+        color: #68778d;
+        font-family: "Outfit", sans-serif; /* Шрифт Outfit */
+        font-weight: 400; /* Обычное начертание (regular) */
+        font-size: 15px; /* Размер шрифта 15px */
+        line-height: 140%; /* Межстрочный интервал 140% */
+        letter-spacing: 0.2px; /* Расстояние между буквами 0.2px */
+        text-align: center;
+        margin: 0;
       }
     </style>
   </head>
-  <body></body>
+  <body>
+    <div class="container">
+      <div class="qr-image"></div>
+      <p class="text-bold">
+        Improve your front-end skills by building projects
+      </p>
+      <p class="text">
+        Scan the QR code to visit Frontend Mentor and take your coding skills to
+        <br />
+        the next level
+      </p>
+    </div>
+  </body>
 </html>
