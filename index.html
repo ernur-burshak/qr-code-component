@@ -37,14 +37,28 @@
         border-radius: 20px;
         padding: 16px 16px 40px 16px;
         box-sizing: border-box;
+        display: flex; /* активируем флекс-контейнер */
+        flex-direction: column; /* элементы располагаются вертикально */
+        gap: 24px; /* вертикальный промежуток между элементами */
+        justify-content: start; /* Начинаем с верхней части */
       }
 
-      .qr-image {
+      .container-qr-image {
         background-image: url("images/image-qr-code.png");
         height: 288px;
         width: 288px;
         background-size: cover;
         border-radius: 10px;
+        background-position: center;
+      }
+
+      .container-text {
+        padding: 0 16px; /* горизонтальные отступы 16px, вертикальные 0px */
+        display: flex;
+        flex-direction: column; /* выстраиваем элементы вертикально */
+        gap: 16px; /* вертикальный промежуток между элементами */
+        height: 131px;
+        text-align: center;
       }
 
       .text-bold {
@@ -54,9 +68,8 @@
         font-size: 22px; /* Размер шрифта 22px */
         line-height: 120%; /* Межстрочный интервал 120% */
         letter-spacing: 0px; /* Расстояние между буквами 0px */
-        margin-top: 24px;
-        margin-bottom: 20px;
-        text-align: center;
+        height: auto; /* Высота подстраивается под содержимое */
+        margin: 0;
       }
 
       .text {
@@ -66,22 +79,24 @@
         font-size: 15px; /* Размер шрифта 15px */
         line-height: 140%; /* Межстрочный интервал 140% */
         letter-spacing: 0.2px; /* Расстояние между буквами 0.2px */
-        text-align: center;
+        height: auto; /* Высота подстраивается под содержимое */
         margin: 0;
       }
     </style>
   </head>
   <body>
     <div class="container">
-      <div class="qr-image"></div>
-      <p class="text-bold">
-        Improve your front-end skills by building projects
-      </p>
-      <p class="text">
-        Scan the QR code to visit Frontend Mentor and take your coding skills to
-        <br />
-        the next level
-      </p>
+      <div class="container-qr-image"></div>
+
+      <div class="container-text">
+        <p class="text-bold">
+          Improve your front-end skills by building projects
+        </p>
+        <p class="text">
+          Scan the QR code to visit Frontend Mentor and take your coding skills
+          to the next level
+        </p>
+      </div>
     </div>
   </body>
 </html>
